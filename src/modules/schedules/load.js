@@ -4,7 +4,6 @@ import { schedulesShow } from "./show.js";
 
 const selectedDate = document.getElementById("date")
 
-
 export async function schedulesDay() {
     
     const date = selectedDate.value
