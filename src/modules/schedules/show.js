@@ -25,8 +25,6 @@ export function schedulesShow({dailySchedules}) {
             time.textContent = dayjs(schedule.when).format("HH:mm")
             name.textContent = schedule.name
 
-            //adiciona a classe de agendamento
-
             //cria o ícone de cancelar o agendamento
             const cancelIcon = document.createElement("img")
             cancelIcon.classList.add("cancel-icon")
