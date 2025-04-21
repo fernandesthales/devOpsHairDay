@@ -12,6 +12,7 @@ export function schedulesShow({dailySchedules}) {
         periodMorning.innerHTML = ""
         periodAfternoon.innerHTML = ""
         periodNight.innerHTML = ""
+        perio
 
         //Renderiza os agendamentos por período
         dailySchedules.forEach((schedule) => {
