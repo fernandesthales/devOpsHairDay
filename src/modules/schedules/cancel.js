@@ -13,6 +13,9 @@ periods.forEach((period) => {
     
                 //pega o id do agendamento para remoção
                 const { id } = item.dataset;
+
+                //remove o agendamento da tela
+                //item.remove()
                 
     
                 //confirma o evento de remoção
