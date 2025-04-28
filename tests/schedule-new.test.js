@@ -3,6 +3,8 @@
  */
 import { scheduleNew } from '../src/services/schedule-new.js';
 
+//teste de unidade para a função scheduleNew
+
 global.fetch = jest.fn();
 global.alert = jest.fn();
 
