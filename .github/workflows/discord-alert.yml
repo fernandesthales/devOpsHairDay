@@ -1,0 +1,21 @@
+name: Send alert to Discord
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [closed]  # Quando uma PR for fechada (mergeado ou não)
+
+jobs:
+  notify:
+    if: github.event.pull_request.merged == true || github.event_name == 'push'
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Send notification to Discord
+      run: |
+        curl -H "Content-Type: application/json" \
+          -X POST \
+          -d "{\"content\": \"🚀 Novo evento no GitHub! Commit ou Merge realizado no repositório **${{ github.repository }}**.\", \"username\": \"GitHub Bot\"}" \
+          ${{ secrets.DISCORD_WEBHOOK_URL }}
